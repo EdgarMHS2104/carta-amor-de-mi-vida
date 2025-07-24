@@ -1,0 +1,99 @@
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to bottom right, #ffe4e1, #fff0f5);
+    overflow: hidden;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.heart-screen {
+    text-align: center;
+    transition: all 0.8s ease;
+    cursor: pointer;
+}
+
+.heart {
+    font-size: 100px;
+    animation: pulse 1.2s infinite;
+}
+
+.instructions {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+}
+
+.letter-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.letter-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.letter-container h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c2185b;
+}
+
+.signature {
+    margin-top: 40px;
+    text-align: right;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    font-size: 24px;
+    color: #c2185b;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animación del corazón */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Pétalos animados */
+.rose-petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 30% 30%, #ff69b4, #c2185b);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: fall 10s linear infinite;
+}
+
+.petal1 { left: 20%; animation-delay: 0s; }
+.petal2 { left: 40%; animation-delay: 3s; }
+.petal3 { left: 60%; animation-delay: 5s; }
+.petal4 { left: 80%; animation-delay: 7s; }
+
+@keyframes fall {
+    0% { top: -10%; transform: translateX(0); }
+    100% { top: 110%; transform: translateX(30px); }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una carta especial</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="rose-petal petal1"></div>
+    <div class="rose-petal petal2"></div>
+    <div class="rose-petal petal3"></div>
+    <div class="rose-petal petal4"></div>
+
+    <div class="container">
+        <!-- Pantalla del corazón -->
+        <div class="heart-screen" id="heartScreen">
+            <div class="heart" id="heart">❤</div>
+            <div class="instructions">Presiona aquí</div>
+        </div>
+        
+        <!-- Pantalla de la carta -->
+        <div class="letter-screen hidden" id="letterScreen">
+            <div class="letter-container">
+                <h1>Para el amor de mi vida</h1>
+                <div class="letter-content">
+                    <p>Querida Mariana,</p>
+                    <p>Esta carta es para ti contando desde el primer día que hicimos conexión, lo recuerdo como si fuera ayer, recuerdo estar sentado mirando la nada y en ese vacío encontré lo más preciado que tengo, recuerdo ese día con una hermosa sonrisa ya que todo fue tan especial que pareciera que el mundo alineó todo a nuestro favor para nosotros estar aquí en estos bellos momentos.</p>
+                    <p>Después de ese día todo fue tan lindo, las buenas y malas anécdotas, los días peleando, los días sonriendo, los días llorando, los días haciendo un postre, los días simplemente en los que dormíamos sin hacer nada más al respecto.</p>
+                    <p>Quiero agradecerte por tan hermosos momentos que me has traído, me has ayudado muchísimo a crecer como persona, me has ayudado a mejorar como hijo, como novio, como hermano, como ser humano, esto lo hago con el fin de expresar todas las cosas que siento por ti, sé que no suelo ser muy detallista porque no sé cómo hacerlo, pero esta es una manera de ellas.</p>
+                    <p>Espero que me puedas permitir seguir siendo la persona que amas por muchos años más, que seamos soporte el uno del otro, que ambos seamos nuestro motivo de superación.</p>
+                    <p>Eres una chica maravillosa, no solo en el aspecto de novia, también de hija, de hermana, sobrina, nieta, eres un grandioso ser humano lo has demostrado con todas tus lindas acciones que tienes hacia los demás aún sin esperar algo a cambio, simplemente queriendo ayudar y contribuir a los demás sin importar que tengas o no.</p>
+                    <p>Recuerdo ese día que hiciste una actividad para darle comida a las personas de la calle aún sin ser tu responsabilidad, aún cuando apenas tenías 18 añitos, buscaste la manera de juntar a muchos jóvenes y poder brindarle ayuda a esas personas que necesitaban, que capaz no tenían un techo, pero ese día no les faltó un plato de comida.</p>
+                    <p>Realmente eres una chica que admiro y amo muchísimo, eso es todo por el momento, recuerdo lo mucho que te amo y te amaré durante todo el tiempo que me lo permitas, mi hermosa niña.</p>
+                    <div class="signature">Con todo mi amor Edgar</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('heart').addEventListener('click', function() {
+            const heartScreen = document.getElementById('heartScreen');
+            const letterScreen = document.getElementById('letterScreen');
+            
+            // Efecto de desvanecimiento del corazón
+            heartScreen.style.opacity = '0';
+            heartScreen.style.transform = 'scale(1.5)';
+            
+            // Mostrar la carta después del efecto
+            setTimeout(() => {
+                heartScreen.classList.add('hidden');
+                letterScreen.classList.remove('hidden');
+                letterScreen.style.opacity = '1';
+            }, 800);
+        });
+    </script>
+</body>
+</html>
